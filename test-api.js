@@ -1,7 +1,7 @@
 // 简单的API测试脚本
 import fetch from 'node-fetch';
 
-const API_BASE = 'http://localhost:8000/api';
+const API_BASE = 'http://localhost:34567/api';
 
 async function testAPI() {
   console.log('🧪 开始测试API...\n');

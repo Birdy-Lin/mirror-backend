@@ -18,7 +18,7 @@ DB_PORT=5432
 DB_NAME=mindmirror
 DB_USER=postgres
 DB_PASSWORD=postgres
-PORT=8000
+PORT=34567
 CORS_ORIGIN=http://localhost:8080
 ```
 

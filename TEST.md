@@ -10,7 +10,7 @@ DB_PORT=5432
 DB_NAME=mindmirror
 DB_USER=postgres
 DB_PASSWORD=postgres
-PORT=8000
+PORT=34567
 CORS_ORIGIN=http://localhost:8080
 ```
 
@@ -31,11 +31,11 @@ npm run dev
 
 ```
 🚀 后端服务器启动成功
-📡 API地址: http://localhost:8000
-🔗 健康检查: http://localhost:8000/api/health
-📊 所有记录: http://localhost:8000/api/records
-📅 今日记录: http://localhost:8000/api/records/today
-🕐 最近记录: http://localhost:8000/api/records/recent?count=5
+📡 API地址: http://localhost:34567
+🔗 健康检查: http://localhost:34567/api/health
+📊 所有记录: http://localhost:34567/api/records
+📅 今日记录: http://localhost:34567/api/records/today
+🕐 最近记录: http://localhost:34567/api/records/recent?count=5
 ✅ 数据库连接成功
 ```
 
@@ -44,7 +44,7 @@ npm run dev
 ### 3.1 健康检查
 
 ```bash
-curl http://localhost:8000/api/health
+curl http://localhost:34567/api/health
 ```
 
 预期响应：
@@ -59,19 +59,19 @@ curl http://localhost:8000/api/health
 ### 3.2 获取所有记录
 
 ```bash
-curl http://localhost:8000/api/records
+curl http://localhost:34567/api/records
 ```
 
 ### 3.3 获取今日记录
 
 ```bash
-curl http://localhost:8000/api/records/today
+curl http://localhost:34567/api/records/today
 ```
 
 ### 3.4 获取最近5条记录
 
 ```bash
-curl http://localhost:8000/api/records/recent?count=5
+curl http://localhost:34567/api/records/recent?count=5
 ```
 
 ## 4. 前端连接测试
@@ -79,7 +79,7 @@ curl http://localhost:8000/api/records/recent?count=5
 确保前端项目中的 `.env` 文件（或 `vite.config.ts`）配置了：
 
 ```
-VITE_API_BASE_URL=http://localhost:8000/api
+VITE_API_BASE_URL=http://localhost:34567/api
 ```
 
 然后启动前端：
@@ -105,7 +105,7 @@ npm run dev
 
 ### 问题2: CORS错误
 
-**错误信息**: `Access to fetch at 'http://localhost:8000/api/...' from origin 'http://localhost:8080' has been blocked by CORS policy`
+**错误信息**: `Access to fetch at 'http://localhost:34567/api/...' from origin 'http://localhost:8080' has been blocked by CORS policy`
 
 **解决方案**:
 1. 检查 `backend/.env` 中的 `CORS_ORIGIN` 是否设置为 `http://localhost:8080`
@@ -113,7 +113,7 @@ npm run dev
 
 ### 问题3: 端口被占用
 
-**错误信息**: `Error: listen EADDRINUSE: address already in use :::8000`
+**错误信息**: `Error: listen EADDRINUSE: address already in use :::34567`
 
 **解决方案**:
 1. 修改 `backend/.env` 中的 `PORT` 为其他端口（如 `8001`）

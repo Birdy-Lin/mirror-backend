@@ -76,7 +76,7 @@ node insert-supabase-data.js
 
 2. **通过后端 API 查询**：
    ```bash
-   curl http://localhost:8000/api/records
+   curl http://localhost:34567/api/records
    ```
 
 ## 📝 示例输出

@@ -6,7 +6,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 34567;
 // CORS配置：支持多个来源（本地开发 + Vercel部署）
 const CORS_ORIGIN = process.env.CORS_ORIGIN || 'http://localhost:8080';
 const corsOrigins = CORS_ORIGIN.split(',').map(origin => origin.trim());
